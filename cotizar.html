@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotiza tu limpieza | Muebles Fullwash Pro</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:radial-gradient(circle at top,#073b7a,#020817 55%,#01040d);
+color:white;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:24px;
+}
+.card{
+width:100%;
+max-width:520px;
+background:rgba(2,12,36,.92);
+border:1px solid rgba(0,200,255,.65);
+border-radius:22px;
+box-shadow:0 0 35px rgba(0,170,255,.55);
+padding:28px;
+}
+h1{
+margin:0 0 10px;
+text-align:center;
+font-size:30px;
+text-transform:uppercase;
+}
+h1 span{color:#00c8ff}
+p{
+text-align:center;
+color:#dff8ff;
+line-height:1.5;
+margin-bottom:24px;
+}
+label{
+display:block;
+font-weight:800;
+margin:14px 0 7px;
+}
+input,select,textarea{
+width:100%;
+border:1px solid rgba(0,200,255,.55);
+background:#061734;
+color:white;
+border-radius:12px;
+padding:14px;
+font-size:16px;
+outline:none;
+}
+textarea{min-height:110px;resize:vertical}
+button{
+width:100%;
+margin-top:20px;
+border:0;
+border-radius:14px;
+padding:16px;
+font-size:18px;
+font-weight:900;
+color:white;
+background:linear-gradient(135deg,#006bff,#00b7ff);
+box-shadow:0 0 22px rgba(0,170,255,.6);
+}
+.whatsapp{
+display:block;
+margin-top:16px;
+text-align:center;
+background:#18b84b;
+border-radius:14px;
+padding:15px;
+font-weight:900;
+}
+.back{
+display:block;
+text-align:center;
+margin-top:18px;
+color:#8eeaff;
+font-weight:800;
+}
+.small{
+font-size:13px;
+color:#bdefff;
+margin-top:12px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Cotiza tu <span>limpieza</span></h1>
+<p>Completa tus datos y te responderemos lo antes posible por WhatsApp.</p>
+
+<form name="cotizacion" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="cotizacion">
+
+<label>Nombre</label>
+<input type="text" name="nombre" placeholder="Ej: Juan Pérez" required>
+
+<label>WhatsApp</label>
+<input type="tel" name="whatsapp" placeholder="Ej: +56 9 1234 5678" required>
+
+<label>Comuna</label>
+<input type="text" name="comuna" placeholder="Ej: Maipú" required>
+
+<label>Servicio que necesitas</label>
+<select name="servicio" required>
+<option value="">Selecciona un servicio</option>
+<option>Lavado de sofá</option>
+<option>Lavado de colchón</option>
+<option>Lavado de sillas de comedor</option>
+<option>Lavado de bergere</option>
+<option>Varios servicios</option>
+</select>
+
+<label>Detalle del servicio</label>
+<textarea name="mensaje" placeholder="Ej: Sofá de 3 cuerpos con manchas, estoy en Maipú..." required></textarea>
+
+<button type="submit">Enviar cotización</button>
+</form>
+
+<a class="whatsapp" href="https://wa.me/56949359891?text=Hola%20Muebles%20Fullwash%20Pro,%20quiero%20cotizar%20un%20lavado%20profesional" target="_blank">
+📲 Cotizar directo por WhatsApp
+</a>
+
+<a class="back" href="/">← Volver a la página principal</a>
+
+<p class="small">Muebles Fullwash Pro · Maipú, Región Metropolitana</p>
+</div>
+</body>
+</html>
