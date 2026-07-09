@@ -1,0 +1,87 @@
+{
+  "sofas": [
+    {
+      "nombre": "1 cuerpo",
+      "precio": "$14.990"
+    },
+    {
+      "nombre": "2 cuerpos",
+      "precio": "$24.990"
+    },
+    {
+      "nombre": "3 cuerpos",
+      "precio": "$34.990"
+    },
+    {
+      "nombre": "Seccional en L",
+      "precio": "$44.990"
+    },
+    {
+      "nombre": "Seccional grande",
+      "precio": "$54.990"
+    }
+  ],
+  "bergere": [
+    {
+      "nombre": "1 cuerpo",
+      "precio": "$15.990"
+    },
+    {
+      "nombre": "2 cuerpos",
+      "precio": "$27.990"
+    },
+    {
+      "nombre": "3 cuerpos",
+      "precio": "$37.990"
+    }
+  ],
+  "colchones": [
+    {
+      "nombre": "1 plaza",
+      "precio": "$19.990"
+    },
+    {
+      "nombre": "1½ plaza",
+      "precio": "$24.990"
+    },
+    {
+      "nombre": "2 plazas",
+      "precio": "$29.990"
+    },
+    {
+      "nombre": "Queen",
+      "precio": "$34.990"
+    },
+    {
+      "nombre": "King",
+      "precio": "$39.990"
+    }
+  ],
+  "sillas": [
+    {
+      "nombre": "1 silla",
+      "precio": "$6.000"
+    },
+    {
+      "nombre": "2 sillas",
+      "precio": "$11.500"
+    },
+    {
+      "nombre": "3 sillas",
+      "precio": "$16.500"
+    },
+    {
+      "nombre": "4 sillas",
+      "precio": "$21.500"
+    },
+    {
+      "nombre": "5 sillas",
+      "precio": "$26.500"
+    },
+    {
+      "nombre": "6 sillas",
+      "precio": "$31.500"
+    }
+  ],
+  "minimo": "$20.000"
+}
