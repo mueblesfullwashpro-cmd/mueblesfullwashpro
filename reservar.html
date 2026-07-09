@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda tu servicio | Muebles Fullwash Pro</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:radial-gradient(circle at top,#063c80,#020817 55%,#01040d);
+color:white;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:24px;
+}
+.card{
+width:100%;
+max-width:540px;
+background:rgba(2,12,36,.94);
+border:1px solid rgba(0,200,255,.75);
+border-radius:24px;
+box-shadow:0 0 35px rgba(0,170,255,.55);
+padding:28px;
+}
+h1{
+margin:0 0 10px;
+text-align:center;
+font-size:30px;
+text-transform:uppercase;
+}
+h1 span{color:#00c8ff}
+p{
+text-align:center;
+color:#dff8ff;
+line-height:1.5;
+margin-bottom:24px;
+}
+label{
+display:block;
+font-weight:900;
+margin:14px 0 7px;
+}
+input,select,textarea{
+width:100%;
+border:1px solid rgba(0,200,255,.55);
+background:#061734;
+color:white;
+border-radius:12px;
+padding:14px;
+font-size:16px;
+outline:none;
+}
+textarea{min-height:95px;resize:vertical}
+button{
+width:100%;
+margin-top:20px;
+border:0;
+border-radius:14px;
+padding:16px;
+font-size:18px;
+font-weight:950;
+color:white;
+background:linear-gradient(135deg,#12b84a,#18d760);
+box-shadow:0 0 22px rgba(18,184,74,.55);
+}
+.back{
+display:block;
+text-align:center;
+margin-top:18px;
+color:#8eeaff;
+font-weight:900;
+}
+.note{
+font-size:13px;
+color:#bdefff;
+margin-top:14px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Agenda tu <span>limpieza</span></h1>
+<p>Completa tus datos y se abrirá WhatsApp con tu solicitud lista para enviar.</p>
+
+<label>Nombre</label>
+<input id="nombre" type="text" placeholder="Ej: Juan Pérez" required>
+
+<label>Teléfono / WhatsApp</label>
+<input id="telefono" type="tel" placeholder="Ej: +56 9 1234 5678" required>
+
+<label>Comuna</label>
+<input id="comuna" type="text" placeholder="Ej: Maipú" required>
+
+<label>Dirección</label>
+<input id="direccion" type="text" placeholder="Ej: Av. Principal 123" required>
+
+<label>Servicio</label>
+<select id="servicio" required>
+<option value="">Selecciona un servicio</option>
+<option>Lavado de sofá</option>
+<option>Lavado de colchón</option>
+<option>Lavado de sillas de comedor</option>
+<option>Lavado de bergere</option>
+<option>Varios servicios</option>
+</select>
+
+<label>Fecha preferida</label>
+<input id="fecha" type="date" required>
+
+<label>Hora preferida</label>
+<input id="hora" type="time" required>
+
+<label>Detalle adicional</label>
+<textarea id="detalle" placeholder="Ej: Sofá de 3 cuerpos con manchas, edificio, casa, estacionamiento, etc."></textarea>
+
+<button onclick="enviarWhatsApp()">📲 Agendar por WhatsApp</button>
+
+<a class="back" href="/">← Volver a la página principal</a>
+<p class="note">Muebles Fullwash Pro · Maipú, Región Metropolitana</p>
+</div>
+
+<script>
+function enviarWhatsApp(){
+  const nombre = document.getElementById('nombre').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
+  const comuna = document.getElementById('comuna').value.trim();
+  const direccion = document.getElementById('direccion').value.trim();
+  const servicio = document.getElementById('servicio').value;
+  const fecha = document.getElementById('fecha').value;
+  const hora = document.getElementById('hora').value;
+  const detalle = document.getElementById('detalle').value.trim();
+
+  if(!nombre || !telefono || !comuna || !direccion || !servicio || !fecha || !hora){
+    alert('Por favor completa todos los campos obligatorios.');
+    return;
+  }
+
+  const mensaje =
+`Hola Muebles Fullwash Pro, quiero agendar un servicio.
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Comuna: ${comuna}
+Dirección: ${direccion}
+Servicio: ${servicio}
+Fecha preferida: ${fecha}
+Hora preferida: ${hora}
+Detalle: ${detalle || 'Sin detalle adicional'}
+
+Quedo atento/a a la confirmación.`;
+
+  const url = 'https://wa.me/56949359891?text=' + encodeURIComponent(mensaje);
+  window.open(url, '_blank');
+}
+</script>
+</body>
+</html>
