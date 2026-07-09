@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "precios"
+    label: "Precios"
+    files:
+      - file: "data/precios.json"
+        label: "Lista de precios"
+        name: "lista_precios"
+        fields:
+          - label: "Sofás"
+            name: "sofas"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "nombre", widget: "string"}
+              - {label: "Precio", name: "precio", widget: "string"}
+          - label: "Bergere"
+            name: "bergere"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "nombre", widget: "string"}
+              - {label: "Precio", name: "precio", widget: "string"}
+          - label: "Colchones"
+            name: "colchones"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "nombre", widget: "string"}
+              - {label: "Precio", name: "precio", widget: "string"}
+          - label: "Sillas"
+            name: "sillas"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "nombre", widget: "string"}
+              - {label: "Precio", name: "precio", widget: "string"}
+          - {label: "Servicio mínimo", name: "minimo", widget: "string"}
